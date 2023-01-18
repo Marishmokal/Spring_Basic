@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="teacher1" class="pro.collections.Teacher">
+		<property name="name" value="Radhe"></property>
+		<property name="phones">
+			<list>
+				<value>8796331038</value>
+				<value>8237357021</value>
+				<value>9423379482</value>
+			</list>
+		</property>
+		<property name="addreses">
+			<set>
+				<value>Delhi</value>
+				<value>Pune</value>
+				<value>Chennai</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="java" value="8" />
+				<entry key="python" value="6" />
+				<entry key=".net" value="7" />
+
+			</map>
+		</property>
+		
+		<property name="props">
+		<props>
+		<prop key="Marish">Mokal</prop>
+		<prop key="Tanuja">Shinde</prop>
+		<prop key="Vaibhav">Vyahare</prop>
+		<prop key="Pranav">Ketagale</prop>
+		</props>
+		</property>
+	</bean>
+
+
+</beans>

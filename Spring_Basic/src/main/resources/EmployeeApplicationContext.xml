@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="emp" class="pro.learn.Employee">
+<constructor-arg name="id" value="1234"></constructor-arg>
+<constructor-arg name="name" value="Ram"></constructor-arg>
+<constructor-arg name="department" value="IT"></constructor-arg>
+<constructor-arg name="address">
+<ref bean="addr"/>
+</constructor-arg>
+</bean>
+
+
+<bean name="addr" class="pro.learn.Address"> 
+<property name="city" value="pune"></property>
+<property name="country" value="India"></property>
+<property name="pin" value="411048"></property>
+</bean>
+</beans>

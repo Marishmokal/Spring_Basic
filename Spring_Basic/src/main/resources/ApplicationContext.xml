@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name = "std1" class="pro.learn.Student">
+	<property name="roll" value="10"> </property>
+	<property name="name" value="Ram"> </property>
+	<property name="address">
+	<ref bean="addr"/>
+	</property>
+	<property name="subjects">
+	<list>
+	<value>Maths</value>
+	<value>Science</value>
+	<value>History</value>
+	</list>
+	</property>
+	
+	<property name="mobileNo">
+	<set>
+	<value>8796331038</value>
+	<value>8237357021</value>
+	<value>8308524165</value>
+	</set>
+	</property>
+	
+	<property name="subjectWiseMarks">
+	<map>
+	<entry key="Maths" value="90"></entry>
+	<entry key="Science" value="88"></entry>
+	<entry key="History" value="56"></entry>
+	</map>
+	</property>
+</bean>
+
+<bean id="myConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+<property name="location" value="classpath:my.properties"></property>
+
+</bean>
+
+<bean name="addr" class="pro.learn.Address"> 
+<property name="city" value="pune"></property>
+<property name="country" value="India"></property>
+<property name="pin" value="411048"></property>
+</bean>
+<!-- <bean name = "std2" class="pro.learn.Student">
+	<property name="roll" value="20"> </property>
+	<property name="name" value="Sham"> </property>
+	<property name="address" value="Mumbai"> </property>
+</bean>
+
+<bean>
+<constructor-arg ></constructor-arg>
+</bean> -->
+
+</beans>

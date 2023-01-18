@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+      
+      <bean name="Car" class="pro.learn.Car" > 
+      <lookup-method name="createEngine" bean="engine"/>
+      <property name="make" value="1998"></property>
+      <property name="type" value="Seden"></property>
+      </bean>
+
+<bean name="engine" class="pro.learn.Engine" scope="prototype"> 
+<property name="type" value="v12"></property>
+<property name="capacity" value="4"></property>
+
+</bean>
+      
+  </beans>
